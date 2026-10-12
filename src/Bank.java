@@ -1,8 +1,10 @@
 public class Bank {
     int balance = 0;
+    String name = "";
 
-    public Bank(int initialBalance) {
+    public Bank(int initialBalance, String usersName) {
         balance = initialBalance;
+        name = usersName;
     }
 
     private void addMoney(int amount) {
@@ -21,7 +23,7 @@ public class Bank {
         }
 
         balance -= amount;
-        System.out.println("Updated balance: " + balance);
+        System.out.println(name + " your updated balance is: " + balance);
     }
 
     private boolean checkUserHasBalance(int amountToSpend) {
